@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by dede58.com" />
+<link href="/skin/css/bootstrap.min.css" rel="stylesheet">
+<link href="/skin/css/style.css" rel="stylesheet">
+<link href="/skin/css/shake.css" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+<!-- head start -->
+<header data-headroom id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container"> 
+    <!-- mobile nav start -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <!-- logo start -->
+      <h1 class="logo"><a class="navbar-brand" href="/"><img src="/skin/pic/logo80_80.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" class="ylw-img-responsive logo-hidden" /><img src="/skin/pic/logo80_80.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" class="ylw-img-responsive logo-visible" /></a><small class="pull-left"><a href="/" class="visible-lg">广州逆渡信息科技有限公司</a></small></h1>
+    </div>
+    <!-- mobile nav end --> 
+    <!-- nav start -->
+    <nav class="collapse navbar-right navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav" id="nav">
+        <li class="dropdown active"><a class="dropdown-toggle" href="/">首页<small>Home</small></a></li>
+        {dede:channelartlist typeid='top'}
+        <li class="dropdown "><a class="dropdown-toggle" data-toggle="dropdown" href="{dede:field name='typeurl'/}">{dede:field name='typename'/}<small>{dede:field.typenameen/}</small></a>
+          <ul class="dropdown-menu dropdown-menu-left">
+            {dede:channel type='son' noself='yes'}
+            <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </li>
+        {/dede:channelartlist}
+      </ul>
+    </nav>
+    <!-- nav end --> 
+  </div>
+</header>
+
+<!-- head end --> 
+<!-- banner start -->
+<div class="banner text-center">
+  <div class="slider">
+    <ul class="slides">
+      <li class="slide">
+        <div class="box" style="background-image:url(/skin/pic/Flash-2.png)"><a><img src="/skin/images/2014101479790393.png" class="ylw-img-responsive" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" /></a></div>
+      </li>
+      <li class="slide">
+        <div class="box" style="background-image:url(/skin/pic/Flash-3.png)"><a><img src="/skin/images/2014101479790393.png" class="ylw-img-responsive" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" /></a></div>
+      </li>
+      <li class="slide">
+        <div class="box" style="background-image:url(/skin/pic/Flash-4.png)"><a><img src="/skin/images/2014101479790393.png" class="ylw-img-responsive" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" /></a></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="videoa" align="center" ><video width="99%" controls="controls">
+  <source src="/skin/flash/game_introduce.mp4" type="video/mp4" />
+</video>
+</div>
+
+<div class="picdiv1"><a href="/a/chanpinzhanshi/"><img src="/skin/pic/product.png"></a></div>
+<div class="picdiv2"><a href="/a/xinwenzixun/"><img src="/skin/pic/news.png"></a></div>
+
+<div class="picdiv3"><a href="http://artsnode.com/a/guanyuwomen/gongsijieshao/tuanduijieshao/"><img src="/skin/pic/about.png"></a></div>
+<div class="footindex">{dede:include filename="footer.htm"/}</div>
+</body>
+</html>
