@@ -61,7 +61,7 @@
   </div>
 </div>
 <div class="videoa" align="center" >
- <video width="99%" controls="controls" poster="/skin/pic/game_video.png">
+ <video id="videoplay" width="99%" controls="controls" poster="/skin/pic/game_video.png">
   <source src="/skin/flash/game_introduce.mp4" type="video/mp4" />
 </video>
 </div>
@@ -71,5 +71,19 @@
 
 <div class="picdiv3"><a href="http://artsnode.com/a/guanyuwomen/gongsijieshao/tuanduijieshao/"><img src="/skin/pic/about.png"></a></div>
 <div class="footindex">{dede:include filename="footer.htm"/}</div>
+<script>
+var videoplay=document.getElementById("videoplay");
+videoplay.onclick=function()
+{
+    if(videoplay.paused)
+    {
+        videoplay.play();
+    }
+    else
+    {
+        videoplay.pause();
+    }
+}
+</script>
 </body>
 </html>
