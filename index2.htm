@@ -16,7 +16,7 @@
 <body>
 <!-- head start -->
 <header data-headroom id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <!--<div class="container"> -->
+  <div class="container"> 
     <!-- mobile nav start -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
@@ -25,9 +25,8 @@
     </div>
     <!-- mobile nav end --> 
     <!-- nav start -->
-    <div>
-    <nav class="mynav collapse navbar-right navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav mynav" id="nav">
+    <nav class="collapse navbar-right navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav" id="nav">
         <li class="dropdown active"><a class="dropdown-toggle" href="/">首页<small>Home</small></a></li>
         {dede:channelartlist typeid='top'}
         <li class="dropdown "><a class="dropdown-toggle" data-toggle="dropdown" href="{dede:field name='typeurl'/}">{dede:field name='typename'/}<small>{dede:field.typenameen/}</small></a>
@@ -40,9 +39,8 @@
         {/dede:channelartlist}
       </ul>
     </nav>
-    </div>
     <!-- nav end --> 
-  <!--</div>-->
+  </div>
 </header>
 
 <!-- head end --> 
@@ -62,15 +60,30 @@
     </ul>
   </div>
 </div>
-<div class="videoa" align="center" ><video width="99%" controls="controls">
-  <source src="/skin/flash/111.mp4" type="video/mp4" />
+<div class="videoa" align="center" >
+ <video id="videoplay" width="99%" controls="controls" poster="/skin/pic/game_video.png">
+  <source src="/skin/flash/game_introduce.mp4" type="video/mp4" />
 </video>
 </div>
 
-<div class="picdiv1"><a href="http://artsnode.com/a/chanpinzhanshi/"><img src="/skin/pic/product.png"></a></div>
-<div class="picdiv2"><a href="http://artsnode.com/a/xinwenzixun/"><img src="/skin/pic/news.png"></a></div>
+<div class="picdiv1"><a href="/a/chanpinzhanshi/"><img src="/skin/pic/product.png"></a></div>
+<div class="picdiv2"><a href="/a/xinwenzixun/"><img src="/skin/pic/news.png"></a></div>
 
 <div class="picdiv3"><a href="http://artsnode.com/a/guanyuwomen/gongsijieshao/tuanduijieshao/"><img src="/skin/pic/about.png"></a></div>
-<div>{dede:include filename="footer.htm"/}</div>
+<div class="footindex">{dede:include filename="footer.htm"/}</div>
+<script>
+var videoplay=document.getElementById("videoplay");
+videoplay.onclick=function()
+{
+    if(videoplay.paused)
+    {
+        videoplay.play();
+    }
+    else
+    {
+        videoplay.pause();
+    }
+}
+</script>
 </body>
 </html>

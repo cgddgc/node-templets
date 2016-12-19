@@ -15,38 +15,39 @@
 </head>
 <body>
 <!-- head start -->
-<header data-headroom id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container"> 
     <!-- mobile nav start -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <!-- logo start -->
-      <h1 class="logo"><a class="navbar-brand" href="/"><img src="/skin/pic/logo80_80.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" class="ylw-img-responsive logo-hidden" /><img src="/skin/pic/logo80_80.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" class="ylw-img-responsive logo-visible" /></a><small class="pull-left"><a href="/" class="visible-lg">广州逆渡信息科技有限公司</a></small></h1>
-    </div>
+<header data-headroom id="header" class="navbar navbar-default navbar-static-top" role="navigation">
     <!-- mobile nav end --> 
     <!-- nav start -->
-    <nav class="collapse navbar-right navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav" id="nav">
-        <li class="dropdown active"><a class="dropdown-toggle" href="/">首页<small>Home</small></a></li>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+      <span class="sr-only">Toggle navigation</span> 
+      <span class="icon-bar"></span> 
+      <span class="icon-bar"></span> 
+      <span class="icon-bar"></span> 
+      </button>
+    </div>
+    <nav class="navbar collapse navbar-collapse" role="navigation">
+    <div class="mynav">
+    <div class="text-center">
+      <img src="/skin/pic/logo_100_100.png">
+    </div>   
+      <ul class="nav nav-pills nav-justified" id="nav">
+        <li class="mynav"><a href="/">首页</a></li>
         {dede:channelartlist typeid='top'}
-        <li class="dropdown "><a class="dropdown-toggle" data-toggle="dropdown" href="{dede:field name='typeurl'/}">{dede:field name='typename'/}<small>{dede:field.typenameen/}</small></a>
-          <ul class="dropdown-menu dropdown-menu-left">
-            {dede:channel type='son' noself='yes'}
-            <li><a href="[field:typeurl/]">[field:typename/]</a></li>
-            {/dede:channel}
-          </ul>
+        <li class="mynav"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
         </li>
         {/dede:channelartlist}
-      </ul>
+      </ul> 
+      </div>
     </nav>
-    <!-- nav end --> 
-  </div>
 </header>
-
+    <!-- nav end --> 
+    <span class="blank"></span>
 <!-- head end --> 
 <!-- banner start -->
 <div class="banner text-center">
-  <div class="slider">
+  <div class="slider myslide">
     <ul class="slides">
       <li class="slide">
         <div class="box" style="background-image:url(/skin/pic/Flash-2.png)"><a><img src="/skin/images/2014101479790393.png" class="ylw-img-responsive" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" /></a></div>
